@@ -46,6 +46,7 @@ type
     btnPrint: TButton;
     actPrint: TAction;
     btnTest: TButton;
+    jvtmrCloseSplash: TJvTimer;
 
     procedure FormShow(Sender: TObject);
     procedure actAddExecute(Sender: TObject);
@@ -65,6 +66,7 @@ type
     procedure actAboutExecute(Sender: TObject);
     procedure jvdbgrdMainKeyPress(Sender: TObject; var Key: Char);
     procedure btnTestClick(Sender: TObject);
+    procedure jvtmrCloseSplashTimer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -287,9 +289,6 @@ begin
   if bHasStart then
   begin
     try
-      frmMain.FormStyle := fsStayOnTop;
-      frmMain.FormStyle := fsNormal;
-
       Log(INFO, 'Start', 'Application');
 
       sBasePath := jvprgstrystrgMain.ReadString('\frmParams\edtDir_Text', '');
@@ -297,6 +296,14 @@ begin
 
       DataModule1.conMain.Connected := True;
       DataModule1.fdqryItems.Active := True;
+
+      {$IFNDEF DEBUG}
+      frmMain.jvtmrCloseSplash.Enabled := True;
+      btnTest.Visible := False;
+      {$ELSE}
+      frmSplash.Hide;
+      frmSplash.Free;
+      {$ENDIF}
 
     except
       on E: Exception do
@@ -366,6 +373,13 @@ begin
 
     Open;
   end;
+end;
+
+procedure TfrmMain.jvtmrCloseSplashTimer(Sender: TObject);
+begin
+  frmSplash.Hide;
+  frmSplash.Free;
+  jvtmrCloseSplash.Enabled := False;
 end;
 
 procedure TfrmMain.srchbxMainInvokeSearch(Sender: TObject);

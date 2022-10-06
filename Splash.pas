@@ -25,6 +25,9 @@ var
 
 implementation
 
+uses
+  WareHouseNG;
+
 {$R *.dfm}
 
 end.

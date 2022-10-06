@@ -301,8 +301,8 @@ object frmSplash: TfrmSplash
   object lblName: TLabel
     Left = 296
     Top = 8
-    Width = 178
-    Height = 40
+    Width = 224
+    Height = 38
     Caption = 'Warehouse NG'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -314,7 +314,7 @@ object frmSplash: TfrmSplash
   object lblVersion: TLabel
     Left = 296
     Top = 54
-    Width = 30
+    Width = 38
     Height = 32
     Caption = '2.0'
     Font.Charset = DEFAULT_CHARSET
@@ -327,8 +327,8 @@ object frmSplash: TfrmSplash
   object lblProgName: TLabel
     Left = 296
     Top = 269
-    Width = 113
-    Height = 20
+    Width = 135
+    Height = 19
     Caption = 'Shpakov Vladyslav'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -340,8 +340,8 @@ object frmSplash: TfrmSplash
   object lblYear: TLabel
     Left = 528
     Top = 272
-    Width = 24
-    Height = 17
+    Width = 28
+    Height = 16
     Caption = '2022'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

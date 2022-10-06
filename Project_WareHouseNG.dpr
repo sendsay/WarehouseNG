@@ -23,9 +23,6 @@ begin
   frmSplash := TfrmSplash.Create(nil);
   frmSplash.Show;
 
-  frmLogin := TfrmLogin.Create(nil);
-  frmLogin.ShowModal;
-
   Application.ProcessMessages;
 
   Application.CreateForm(TfrmMain, frmMain);
@@ -34,6 +31,6 @@ begin
   Application.CreateForm(TfrmParams, frmParams);
   Application.CreateForm(TfrmShowFoto, frmShowFoto);
   Application.CreateForm(TfrmAbout, frmAbout);
-
+  Application.CreateForm(TfrmLogin, frmLogin);
   Application.Run;
 end.

@@ -15,18 +15,18 @@ File_12=TSourceModule,'D:\SOFT\Projects\WareHouse\Android\Debug\Project_WareHous
 File_13=TSourceModule,'c:\program files (x86)\embarcadero\studio\19.0\source\Indy10\Core\IdSocketHandle.pas',0,1,378,1,397,0,0,,
 
 [Modules]
-Module0=D:\Projects\Delphi\WareHouseNG\WareHouseNG.pas
-Module1=D:\Projects\Delphi\WareHouseNG\DataModule.pas
+Module0=D:\Projects\Delphi\WareHouseNG\DataModule.pas
+Module1=D:\Projects\Delphi\WareHouseNG\WareHouseNG.pas
 Module2=D:\Projects\Delphi\WareHouseNG\ShowFoto.pas
 Module3=D:\Projects\Delphi\WareHouseNG\Params.pas
 Module4=D:\Projects\Delphi\WareHouseNG\AddEdit.pas
 Count=5
 EditWindowCount=1
 
-[D:\Projects\Delphi\WareHouseNG\WareHouseNG.pas]
+[D:\Projects\Delphi\WareHouseNG\DataModule.pas]
 ModuleType=TSourceModule
 
-[D:\Projects\Delphi\WareHouseNG\DataModule.pas]
+[D:\Projects\Delphi\WareHouseNG\WareHouseNG.pas]
 ModuleType=TSourceModule
 
 [D:\Projects\Delphi\WareHouseNG\ShowFoto.pas]
@@ -40,7 +40,7 @@ ModuleType=TSourceModule
 
 [EditWindow0]
 ViewCount=5
-CurrentEditView=D:\Projects\Delphi\WareHouseNG\WareHouseNG.pas
+CurrentEditView=D:\Projects\Delphi\WareHouseNG\DataModule.pas
 View0=0
 View1=1
 View2=2
@@ -69,7 +69,7 @@ RightPanelSize=1286
 RightPanelClients=DockSite4,DockSite3
 RightPanelData=00000800010100000000420F00000000000001060500000000000001000000004415000009000000446F636B53697465340100000000201B000009000000446F636B5369746533FFFFFFFF
 BottomPanelSize=1574
-BottomPanelClients=DockSite1,MessageView
+BottomPanelClients=MessageView,DockSite1
 BottomPanelData=0000080001020100000009000000446F636B5369746531DE440000000000000226060000000000000100000000DE4400000F0000004D65737361676556696577466F726DFFFFFFFF
 BottomMiddlePanelSize=0
 BottomMiddlePanelClients=DockSite0,GraphDrawingModel
@@ -79,13 +79,13 @@ TabDockRightClients=DockSite2=0
 [View0]
 CustomEditViewType=TEditView
 Module=D:\Projects\Delphi\WareHouseNG\WareHouseNG.pas
-CursorX=70
-CursorY=270
-TopLine=260
+CursorX=28
+CursorY=271
+TopLine=266
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=D:\Projects\Delphi\WareHouseNG\WareHouseNG.pas
+EditViewName=Borland.FormDesignerView
 
 [View1]
 CustomEditViewType=TEditView
@@ -211,11 +211,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=6754
+Height=4331
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=6754
+ClientHeight=4331
 TBDockHeight=5901
 LRDockWidth=2349
 Dockable=1
@@ -300,6 +300,11 @@ LRDockWidth=1297
 Dockable=1
 StayOnTop=0
 SplitPos=115
+
+[PropInspDesignerSelection]
+ArrangeBy=Name
+SelectedItem="LiveBindings Designer",OnDblClick
+ExpandedItems=Anchors=0,BorderIcons=1,Constraints=0,CustomTitleBar=0,Font=0,GlassFrame=0,HorzScrollBar=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,Font.Style=0,Padding=0,BevelEdges=0,StyleElements=0,Touch=0,ImageMargins=0,Action=0,DataSource=0,Options=0,OptionsEx=0,VertScrollBar=0
 
 [DebugLogView]
 PercentageSizes=1
@@ -389,12 +394,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1917
-Height=3953
+Width=2000
+Height=4331
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1917
-ClientHeight=3953
+ClientWidth=2000
+ClientHeight=4331
 TBDockHeight=4884
 LRDockWidth=7151
 Dockable=1
@@ -408,12 +413,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1917
-Height=3953
+Width=2000
+Height=4331
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1917
-ClientHeight=3953
+ClientWidth=2000
+ClientHeight=4331
 TBDockHeight=5959
 LRDockWidth=2510
 Dockable=1
@@ -463,8 +468,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=-328
-Top=-373
+Left=-1480
+Top=-271
 Width=1849
 Height=3140
 MaxLeft=-1
@@ -613,12 +618,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1917
-Height=3953
+Width=2000
+Height=4331
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1917
-ClientHeight=3953
+ClientWidth=2000
+ClientHeight=4331
 TBDockHeight=4884
 LRDockWidth=5307
 Dockable=1
@@ -702,14 +707,14 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=4
-Top=24
+Left=8
+Top=8
 Width=2000
-Height=7025
+Height=4603
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=7025
+ClientHeight=4603
 TBDockHeight=4603
 LRDockWidth=2000
 Dockable=1

@@ -15,10 +15,7 @@ type
     lblLogin: TLabel;
     lblPassword: TLabel;
     edtPassword: TEdit;
-    jvtmrCloseSplash: TJvTimer;
     btnLogin: TButton;
-    procedure FormShow(Sender: TObject);
-    procedure jvtmrCloseSplashTimer(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
   private
@@ -33,36 +30,20 @@ var
 implementation
 
 uses
-  Splash;
+  Splash, WareHouseNG;
 
 {$R *.dfm}
 
 procedure TfrmLogin.btnCancelClick(Sender: TObject);
 begin
+  frmLogin.Close;
   Application.Terminate;
 end;
 
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
 begin
-  frmLogin.Close;
-end;
+  frmMain.show;
 
-procedure TfrmLogin.FormShow(Sender: TObject);
-begin
-  {$IFNDEF DEBUG}
-  frmMain.jvtmrCloseSplash.Enabled := True;
-  btnTest.Visible := False;
-  {$ELSE}
-  frmSplash.Hide;
-  frmSplash.Free;
-  {$ENDIF}
-end;
-
-procedure TfrmLogin.jvtmrCloseSplashTimer(Sender: TObject);
-begin
-  frmSplash.Hide;
-  frmSplash.Free;
-  jvtmrCloseSplash.Enabled := False;
 end;
 
 end.
