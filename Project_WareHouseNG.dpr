@@ -10,7 +10,8 @@ uses
   Vcl.Styles,
   ShowFoto in 'ShowFoto.pas' {frmShowFoto},
   Splash in 'Splash.pas' {frmSplash},
-  About in 'About.pas' {frmAbout};
+  About in 'About.pas' {frmAbout},
+  Login in 'Login.pas' {frmLogin};
 
 {$R *.res}
 
@@ -24,11 +25,14 @@ begin
 
   Application.ProcessMessages;
 
-  Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmLogin, frmLogin);
+
+//  Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TfrmAddEdit, frmAddEdit);
   Application.CreateForm(TfrmParams, frmParams);
   Application.CreateForm(TfrmShowFoto, frmShowFoto);
   Application.CreateForm(TfrmAbout, frmAbout);
+
   Application.Run;
 end.

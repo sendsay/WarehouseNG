@@ -41,7 +41,6 @@ type
     actDelete: TAction;
     jvlgflMain: TJvLogFile;
     actShowFoto: TAction;
-    jvtmrCloseSplash: TJvTimer;
     frxcrsbjctPrint: TfrxCrossObject;
     frxrprtPrint: TfrxReport;
     btnPrint: TButton;
@@ -59,7 +58,6 @@ type
     procedure dbimgFotoDblClick(Sender: TObject);
     procedure jvdbgrdMainTitleBtnClick(Sender: TObject; ACol: Integer;
       Field: TField);
-    procedure jvtmrCloseSplashTimer(Sender: TObject);
     procedure actPrintExecute(Sender: TObject);
     procedure frxrprtPrintBeforePrint(Sender: TfrxReportComponent);
     procedure jvdbgrdMainMouseUp(Sender: TObject; Button: TMouseButton;
@@ -297,15 +295,6 @@ begin
       DataModule1.conMain.Connected := True;
       DataModule1.fdqryItems.Active := True;
 
-
-      {$IFNDEF DEBUG}
-      frmMain.jvtmrCloseSplash.Enabled := True;
-      btnTest.Visible := False;
-      {$ELSE}
-      frmSplash.Hide;
-      frmSplash.Free;
-      {$ENDIF}
-
     except
       on E: Exception do
       begin
@@ -374,13 +363,6 @@ begin
 
     Open;
   end;
-end;
-
-procedure TfrmMain.jvtmrCloseSplashTimer(Sender: TObject);
-begin
-  frmSplash.Hide;
-  frmSplash.Free;
-  jvtmrCloseSplash.Enabled := False;
 end;
 
 procedure TfrmMain.srchbxMainInvokeSearch(Sender: TObject);
