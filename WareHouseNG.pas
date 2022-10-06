@@ -287,6 +287,9 @@ begin
   if bHasStart then
   begin
     try
+      frmMain.FormStyle := fsStayOnTop;
+      frmMain.FormStyle := fsNormal;
+
       Log(INFO, 'Start', 'Application');
 
       sBasePath := jvprgstrystrgMain.ReadString('\frmParams\edtDir_Text', '');

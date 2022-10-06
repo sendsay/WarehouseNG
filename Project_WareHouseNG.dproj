@@ -118,6 +118,8 @@
         <Icon_MainIcon>Project_WareHouseNG_Icon.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>icons\data-warehouseBlack.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>icons\data-warehouseBlack.png</UWP_DelphiLogo150>
+        <VerInfo_MajorVer>2</VerInfo_MajorVer>
+        <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
