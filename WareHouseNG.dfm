@@ -3279,7 +3279,7 @@ object frmMain: TfrmMain
   OnClose = FormClose
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 19
+  TextHeight = 20
   object jvdbgrdMain: TJvDBGrid
     Left = 0
     Top = 57
@@ -3308,8 +3308,8 @@ object frmMain: TfrmMain
     SelectColumnsDialogStrings.OK = '&OK'
     SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
     EditControls = <>
-    RowsHeight = 23
-    TitleRowHeight = 23
+    RowsHeight = 24
+    TitleRowHeight = 24
     Columns = <
       item
         Expanded = False
@@ -3357,7 +3357,7 @@ object frmMain: TfrmMain
         Title.Font.Height = -17
         Title.Font.Name = 'Ubuntu Condensed'
         Title.Font.Style = [fsBold]
-        Width = 166
+        Width = 186
         Visible = True
       end>
   end
@@ -3460,7 +3460,7 @@ object frmMain: TfrmMain
       TabOrder = 5
       TextHint = 'Enter search string'
       OnInvokeSearch = srchbxMainInvokeSearch
-      ExplicitHeight = 34
+      ExplicitHeight = 37
     end
     object btnPrint: TButton
       AlignWithMargins = True
@@ -3506,21 +3506,21 @@ object frmMain: TfrmMain
       Left = 6
       Top = 21
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 20
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alTop
       Caption = 'ID item :'
-      ExplicitWidth = 62
+      ExplicitWidth = 52
     end
     object dbtxtIDItem: TDBText
       AlignWithMargins = True
       Left = 16
-      Top = 45
+      Top = 46
       Width = 268
-      Height = 23
+      Height = 24
       Margins.Left = 15
       Margins.Top = 5
       Margins.Right = 5
@@ -3536,30 +3536,30 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 46
-      ExplicitWidth = 102
+      ExplicitTop = 45
+      ExplicitWidth = 89
     end
     object lblItem: TLabel
       AlignWithMargins = True
       Left = 6
-      Top = 73
+      Top = 75
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Item :'
-      ExplicitTop = 75
-      ExplicitWidth = 41
+      ExplicitTop = 73
+      ExplicitWidth = 35
     end
     object dbtxtItem: TDBText
       AlignWithMargins = True
       Left = 16
-      Top = 97
+      Top = 100
       Width = 268
-      Height = 23
+      Height = 24
       Margins.Left = 15
       Margins.Top = 5
       Margins.Right = 5
@@ -3575,30 +3575,30 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 100
-      ExplicitWidth = 82
+      ExplicitTop = 97
+      ExplicitWidth = 72
     end
     object lblQuantity: TLabel
       AlignWithMargins = True
       Left = 6
-      Top = 125
+      Top = 129
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Quantity :'
-      ExplicitTop = 129
-      ExplicitWidth = 70
+      ExplicitTop = 125
+      ExplicitWidth = 61
     end
     object dbtxtQuantity: TDBText
       AlignWithMargins = True
       Left = 16
-      Top = 149
+      Top = 154
       Width = 268
-      Height = 23
+      Height = 24
       Margins.Left = 15
       Margins.Top = 5
       Margins.Right = 5
@@ -3614,30 +3614,30 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 154
-      ExplicitWidth = 116
+      ExplicitTop = 149
+      ExplicitWidth = 104
     end
     object lblNotes: TLabel
       AlignWithMargins = True
       Left = 6
-      Top = 177
+      Top = 183
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Notes :'
-      ExplicitTop = 183
-      ExplicitWidth = 51
+      ExplicitTop = 177
+      ExplicitWidth = 43
     end
     object dbtxtNotes: TDBText
       AlignWithMargins = True
       Left = 16
-      Top = 201
+      Top = 208
       Width = 268
-      Height = 23
+      Height = 24
       Margins.Left = 15
       Margins.Top = 5
       Margins.Right = 5
@@ -3653,23 +3653,23 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 208
-      ExplicitWidth = 94
+      ExplicitTop = 201
+      ExplicitWidth = 81
     end
     object lblFoto: TLabel
       AlignWithMargins = True
       Left = 6
-      Top = 376
+      Top = 375
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alBottom
       Caption = 'Foto :'
-      ExplicitTop = 375
-      ExplicitWidth = 42
+      ExplicitTop = 376
+      ExplicitWidth = 35
     end
     object dbimgFoto: TDBImage
       AlignWithMargins = True

@@ -249,10 +249,10 @@ begin
       for j := 1 to 4 do
       begin
         case j of
-          0: Cross. AddValue([i], [j], [prnArr[i].id]);
-          1: Cross. AddValue([i], [j], [prnArr[i].name]);
-          2: Cross. AddValue([i], [j], [prnArr[i].quantity]);
-          3: Cross. AddValue([i], [j], [prnArr[i].machine]);
+          1: Cross. AddValue([i], [j], [prnArr[i].id]);
+          2: Cross. AddValue([i], [j], [prnArr[i].name]);
+          3: Cross. AddValue([i], [j], [prnArr[i].quantity]);
+          4: Cross. AddValue([i], [j], [prnArr[i].machine]);
         end;
       end;
 
