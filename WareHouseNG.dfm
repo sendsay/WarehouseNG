@@ -3505,7 +3505,7 @@ object frmMain: TfrmMain
       AlignWithMargins = True
       Left = 6
       Top = 21
-      Width = 278
+      Width = 52
       Height = 20
       Margins.Left = 5
       Margins.Top = 20
@@ -3513,13 +3513,12 @@ object frmMain: TfrmMain
       Margins.Bottom = 0
       Align = alTop
       Caption = 'ID item :'
-      ExplicitWidth = 52
     end
     object dbtxtIDItem: TDBText
       AlignWithMargins = True
       Left = 16
       Top = 46
-      Width = 268
+      Width = 89
       Height = 24
       Margins.Left = 15
       Margins.Top = 5
@@ -3536,14 +3535,12 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 45
-      ExplicitWidth = 89
     end
     object lblItem: TLabel
       AlignWithMargins = True
       Left = 6
       Top = 75
-      Width = 278
+      Width = 35
       Height = 20
       Margins.Left = 5
       Margins.Top = 5
@@ -3551,14 +3548,12 @@ object frmMain: TfrmMain
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Item :'
-      ExplicitTop = 73
-      ExplicitWidth = 35
     end
     object dbtxtItem: TDBText
       AlignWithMargins = True
       Left = 16
       Top = 100
-      Width = 268
+      Width = 72
       Height = 24
       Margins.Left = 15
       Margins.Top = 5
@@ -3575,14 +3570,12 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 97
-      ExplicitWidth = 72
     end
     object lblQuantity: TLabel
       AlignWithMargins = True
       Left = 6
       Top = 129
-      Width = 278
+      Width = 61
       Height = 20
       Margins.Left = 5
       Margins.Top = 5
@@ -3590,14 +3583,12 @@ object frmMain: TfrmMain
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Quantity :'
-      ExplicitTop = 125
-      ExplicitWidth = 61
     end
     object dbtxtQuantity: TDBText
       AlignWithMargins = True
       Left = 16
       Top = 154
-      Width = 268
+      Width = 104
       Height = 24
       Margins.Left = 15
       Margins.Top = 5
@@ -3614,14 +3605,12 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 149
-      ExplicitWidth = 104
     end
     object lblNotes: TLabel
       AlignWithMargins = True
       Left = 6
       Top = 183
-      Width = 278
+      Width = 43
       Height = 20
       Margins.Left = 5
       Margins.Top = 5
@@ -3629,14 +3618,12 @@ object frmMain: TfrmMain
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Notes :'
-      ExplicitTop = 177
-      ExplicitWidth = 43
     end
     object dbtxtNotes: TDBText
       AlignWithMargins = True
       Left = 16
       Top = 208
-      Width = 268
+      Width = 81
       Height = 24
       Margins.Left = 15
       Margins.Top = 5
@@ -3653,14 +3640,12 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 201
-      ExplicitWidth = 81
     end
     object lblFoto: TLabel
       AlignWithMargins = True
       Left = 6
       Top = 375
-      Width = 278
+      Width = 35
       Height = 20
       Margins.Left = 5
       Margins.Top = 5
@@ -3668,8 +3653,6 @@ object frmMain: TfrmMain
       Margins.Bottom = 0
       Align = alBottom
       Caption = 'Foto :'
-      ExplicitTop = 376
-      ExplicitWidth = 35
     end
     object dbimgFoto: TDBImage
       AlignWithMargins = True
@@ -3711,19 +3694,19 @@ object frmMain: TfrmMain
     StorageOptions.BooleanStringFalseValues = 'FALSE, NO, N'
     Root = 'SOFTWARE\Sendsay\WareHouseNG'
     SubStorages = <>
-    Left = 496
-    Top = 264
+    Left = 504
+    Top = 184
   end
   object jvfrmstrgMain: TJvFormStorage
     AppStorage = jvprgstrystrgMain
     AppStoragePath = '%FORM_NAME%\'
     StoredValues = <>
-    Left = 416
-    Top = 264
+    Left = 424
+    Top = 184
   end
   object actlstMain: TActionList
-    Left = 608
-    Top = 264
+    Left = 632
+    Top = 192
     object actAdd: TAction
       Caption = 'Add'
       Hint = 'Add new record'
@@ -3767,12 +3750,12 @@ object frmMain: TfrmMain
     FileName = 'D:\log.txt'
     AutoSave = True
     SizeLimit = 10000
-    Left = 608
-    Top = 328
+    Left = 504
+    Top = 280
   end
   object frxcrsbjctPrint: TfrxCrossObject
-    Left = 176
-    Top = 376
+    Left = 184
+    Top = 280
   end
   object frxrprtPrint: TfrxReport
     Version = '6.9.14'
@@ -3836,8 +3819,8 @@ object frmMain: TfrmMain
       ''
       'end.')
     OnBeforePrint = frxrprtPrintBeforePrint
-    Left = 176
-    Top = 320
+    Left = 184
+    Top = 224
     Datasets = <>
     Variables = <>
     Style = <>
@@ -4070,7 +4053,7 @@ object frmMain: TfrmMain
     Enabled = False
     Interval = 2000
     OnTimer = jvtmrCloseSplashTimer
-    Left = 417
-    Top = 360
+    Left = 425
+    Top = 280
   end
 end

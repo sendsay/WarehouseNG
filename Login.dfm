@@ -4,8 +4,8 @@ object frmLogin: TfrmLogin
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Login'
-  ClientHeight = 351
-  ClientWidth = 621
+  ClientHeight = 134
+  ClientWidth = 351
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -3277,32 +3277,32 @@ object frmLogin: TfrmLogin
   Position = poMainFormCenter
   ShowHint = True
   PixelsPerInch = 96
-  TextHeight = 19
+  TextHeight = 20
   object lblLogin: TLabel
     Left = 17
     Top = 11
-    Width = 95
-    Height = 19
+    Width = 79
+    Height = 20
     Caption = 'Login name :'
   end
   object lblPassword: TLabel
     Left = 17
     Top = 51
-    Width = 81
-    Height = 19
+    Width = 65
+    Height = 20
     Caption = 'Password :'
   end
   object dbcbbUserName: TDBComboBox
     Left = 113
     Top = 8
     Width = 225
-    Height = 27
+    Height = 28
     TabOrder = 0
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 301
-    Width = 621
+    Top = 84
+    Width = 351
     Height = 50
     Align = alBottom
     Caption = 'pnlButtons'
@@ -3310,7 +3310,7 @@ object frmLogin: TfrmLogin
     TabOrder = 1
     object btnCancel: TButton
       AlignWithMargins = True
-      Left = 520
+      Left = 250
       Top = 6
       Width = 90
       Height = 38
@@ -3343,7 +3343,7 @@ object frmLogin: TfrmLogin
     Left = 113
     Top = 48
     Width = 225
-    Height = 27
+    Height = 28
     PasswordChar = '*'
     TabOrder = 2
     Text = 'edtPassword'

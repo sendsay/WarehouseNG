@@ -35,8 +35,6 @@ type
 var
   DataModule1: TDataModule1;
 
-  procedure SDM(Str : Variant); stdcall external 'MyDLL.dll' {$IFNDEF DEBUG} delayed {$ENDIF};
-
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}

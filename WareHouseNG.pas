@@ -291,6 +291,9 @@ begin
     try
       Log(INFO, 'Start', 'Application');
 
+//      frmMain.FormStyle := fsStayOnTop;
+//      frmMain.FormStyle := fsNormal;
+
       sBasePath := jvprgstrystrgMain.ReadString('\frmParams\edtDir_Text', '');
       DataModule1.conMain.Params.Database := sBasePath + '\' + 'WareHouse.accdb';
 
@@ -310,12 +313,12 @@ begin
       begin
         if E.ClassName = 'EMSAccessNativeException' then
         begin
-          Log(ERROR, 'Can`t find database', (E.ClassName + ' > ' + E.Message));
+         Log(ERROR, 'Can`t find database', (E.ClassName + ' > ' + E.Message));
          ShowMessage('Can`t find the database!' + #10#13 + E.ClassName + #10#13 + E.Message);
         end
         else
         begin
-          Log(ERROR, 'Connect to base', (E.ClassName + ' > ' + E.Message));
+          Log(ERROR, 'Connect to base error', (E.ClassName + ' > ' + E.Message));
           ShowMessage(E.ClassName + #10#13 + E.Message);
         end;
       end;

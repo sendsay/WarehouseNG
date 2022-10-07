@@ -22,6 +22,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    class function Execute: Boolean;
   end;
 
 var
@@ -29,21 +30,30 @@ var
 
 implementation
 
-uses
-  Splash, WareHouseNG;
-
 {$R *.dfm}
+
+class function TfrmLogin.Execute: boolean;
+begin
+  with TfrmLogin.Create(nil) do
+  try
+    Result := ShowModal = mrOk;
+  finally
+    Free;
+  end;
+end;
 
 procedure TfrmLogin.btnCancelClick(Sender: TObject);
 begin
-  frmLogin.Close;
   Application.Terminate;
 end;
 
-procedure TfrmLogin.btnLoginClick(Sender: TObject);
+procedure TfrmLogin.btnLoginClick(Sender: TObject) ;
 begin
-  frmMain.show;
+  if edtPassword.Text = 'delphi' then
 
+    ModalResult := mrOK
+  else
+    ModalResult := mrAbort;
 end;
 
 end.
