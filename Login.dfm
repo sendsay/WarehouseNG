@@ -3343,6 +3343,7 @@ object frmLogin: TfrmLogin
     Hint = 'Enter password'
     PasswordChar = '*'
     TabOrder = 1
+    OnKeyPress = edtPasswordKeyPress
   end
   object cbbUsers: TJvComboBox
     Left = 113

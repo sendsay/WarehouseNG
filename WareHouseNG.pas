@@ -124,6 +124,7 @@ procedure Log(sTitle: string);
 begin
   frmMain.jvlgflMain.Severity := INFO;
   frmMain.jvlgflMain.Add(' '+ sTitle);
+
 end;
 
 procedure Log(lcSeverity: TJvLogEventSeverity; sTitle, sDesc: string);

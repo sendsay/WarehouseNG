@@ -4,13 +4,16 @@ object DataModule1: TDataModule1
   Width = 489
   object conMain: TFDConnection
     Params.Strings = (
+      'Database=Z:\BASE_DONT_TOUCH\Warehouse\WareHouse.accdb'
       'DriverID=MSAcc')
+    Connected = True
     LoginPrompt = False
     AfterConnect = conMainAfterConnect
     Left = 133
     Top = 27
   end
   object fdqryItems: TFDQuery
+    Active = True
     Connection = conMain
     SQL.Strings = (
       'SELECT * FROM Items ORDER BY Name_Item')
@@ -59,6 +62,7 @@ object DataModule1: TDataModule1
   end
   object fdgxwtcrsrMain: TFDGUIxWaitCursor
     Provider = 'Forms'
+    ScreenCursor = gcrAppWait
     Left = 360
     Top = 24
   end
@@ -71,13 +75,12 @@ object DataModule1: TDataModule1
     SQL.Strings = (
       'SELECT * FROM Users')
     Left = 72
-    Top = 152
+    Top = 160
     object fdtncfldUsersID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInWhere, pfInKey]
       ReadOnly = True
-      Visible = False
     end
     object fdqryUsersUserName: TWideStringField
       FieldName = 'UserName'
@@ -87,6 +90,11 @@ object DataModule1: TDataModule1
     object fdqryUsersUserPass: TWideStringField
       FieldName = 'UserPass'
       Origin = 'UserPass'
+      Size = 255
+    end
+    object fdqryUsersMacine: TWideStringField
+      FieldName = 'Macine'
+      Origin = 'Macine'
       Size = 255
     end
   end

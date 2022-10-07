@@ -3357,7 +3357,7 @@ object frmMain: TfrmMain
         Title.Font.Height = -17
         Title.Font.Name = 'Ubuntu Condensed'
         Title.Font.Style = [fsBold]
-        Width = 186
+        Width = 169
         Visible = True
       end>
   end
@@ -3536,7 +3536,7 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitWidth = 89
+      ExplicitWidth = 76
     end
     object lblItem: TLabel
       AlignWithMargins = True
@@ -3573,7 +3573,7 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitWidth = 72
+      ExplicitWidth = 167
     end
     object lblQuantity: TLabel
       AlignWithMargins = True
@@ -3610,7 +3610,7 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitWidth = 104
+      ExplicitWidth = 9
     end
     object lblNotes: TLabel
       AlignWithMargins = True
@@ -3647,7 +3647,7 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitWidth = 81
+      ExplicitWidth = 256
     end
     object lblFoto: TLabel
       AlignWithMargins = True
