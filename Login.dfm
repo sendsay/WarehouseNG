@@ -3302,7 +3302,7 @@ object frmLogin: TfrmLogin
     Align = alBottom
     Caption = 'pnlButtons'
     ShowCaption = False
-    TabOrder = 0
+    TabOrder = 2
     object btnCancel: TButton
       AlignWithMargins = True
       Left = 250
@@ -3316,7 +3316,7 @@ object frmLogin: TfrmLogin
       Align = alRight
       Caption = 'Cancel'
       ModalResult = 8
-      TabOrder = 0
+      TabOrder = 1
       OnClick = btnCancelClick
     end
     object btnLogin: TButton
@@ -3331,7 +3331,7 @@ object frmLogin: TfrmLogin
       Margins.Bottom = 5
       Align = alLeft
       Caption = 'Login'
-      TabOrder = 1
+      TabOrder = 0
       OnClick = btnLoginClick
     end
   end
@@ -3352,7 +3352,7 @@ object frmLogin: TfrmLogin
     Height = 28
     Hint = 'Select user'
     Sorted = True
-    TabOrder = 2
+    TabOrder = 0
     Text = ''
   end
 end
