@@ -70,7 +70,6 @@ type
   private
     { Private declarations }
   public
-//    sBasePath: string;
 
   end;
 
@@ -88,6 +87,7 @@ var
   frmMain: TfrmMain;
   bHasStart: Boolean = True;
   sBasePath: string;
+  sMachine: string;
 
   procedure SDM(Str : Variant); stdcall external 'MyDLL.dll' {$IFNDEF DEBUG} delayed {$ENDIF};
 
@@ -303,6 +303,13 @@ begin
 //      DataModule1.conMain.Connected := True;
 //      DataModule1.fdqryItems.Active := True;
 //      DataModule1.fdqryUsers.Active := True;
+
+      with DataModule1.fdqryItems do
+      begin
+        SQL.Clear;
+        SQL.Add('SELECT * FROM Items WHERE Machine LIKE ' + QuotedStr('%' +sMachine+ '%'));
+        Open;
+      end;
 
       {$IFNDEF DEBUG}
       frmMain.jvtmrCloseSplash.Enabled := True;

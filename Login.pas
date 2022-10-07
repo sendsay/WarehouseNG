@@ -95,26 +95,37 @@ var
 begin
   with DataModule1 do
   begin
+    //check name in base
     if fdqryUsers.Locate('UserName', cbbUsers.Text, []) then
     begin
+      //get pass
       sUserPass := fdqryUsers.FieldByName('UserPass').AsString;
 
+      //check
       if sUserPass = edtPassword.Text then
+      begin
+        //get level pass
+        sMachine := fdqryUsers.FieldByName('Machine').AsString;
+        //exit with OK
         ModalResult := mrOK
+      end
       else
       begin
+        //inc try count
         Inc(iTryCount);
 
         MessageDlg('Wrong login or password!',  mtConfirmation, [mbOK], 0);
 
         if iTryCount = 3 then
         begin
+          //exit with error
           Application.Terminate;
         end;
       end;
     end
     else
     begin
+      //msg
       MessageDlg('Enter valid name!',  mtConfirmation, [mbOK], 0);
     end;
   end;

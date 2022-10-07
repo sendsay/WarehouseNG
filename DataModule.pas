@@ -30,7 +30,7 @@ type
     fdtncfldUsersID: TFDAutoIncField;
     fdqryUsersUserName: TWideStringField;
     fdqryUsersUserPass: TWideStringField;
-    fdqryUsersMacine: TWideStringField;
+    wdstrngfldUsersMachine: TWideStringField;
     procedure conMainAfterConnect(Sender: TObject);
   private
     { Private declarations }

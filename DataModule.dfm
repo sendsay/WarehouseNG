@@ -71,6 +71,7 @@ object DataModule1: TDataModule1
     Top = 88
   end
   object fdqryUsers: TFDQuery
+    Active = True
     Connection = conMain
     SQL.Strings = (
       'SELECT * FROM Users')
@@ -92,9 +93,9 @@ object DataModule1: TDataModule1
       Origin = 'UserPass'
       Size = 255
     end
-    object fdqryUsersMacine: TWideStringField
-      FieldName = 'Macine'
-      Origin = 'Macine'
+    object wdstrngfldUsersMachine: TWideStringField
+      FieldName = 'Machine'
+      Origin = 'Machine'
       Size = 255
     end
   end
