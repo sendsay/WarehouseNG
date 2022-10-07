@@ -16,31 +16,29 @@ uses
 {$R *.res}
 
 begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Sky');
+
+  Application.CreateForm(TDataModule1, DataModule1);
 
   if TfrmLogin.Execute then
   begin
-    Application.Initialize;
-    Application.MainFormOnTaskbar := True;
-    TStyleManager.TrySetStyle('Sky');
-
     frmSplash := TfrmSplash.Create(nil);
     frmSplash.Show;
 
     Application.ProcessMessages;
 
     Application.CreateForm(TfrmMain, frmMain);
-    Application.CreateForm(TDataModule1, DataModule1);
     Application.CreateForm(TfrmAddEdit, frmAddEdit);
     Application.CreateForm(TfrmParams, frmParams);
     Application.CreateForm(TfrmShowFoto, frmShowFoto);
     Application.CreateForm(TfrmAbout, frmAbout);
     Application.Run;
-
   end
   else
   begin
-    Application.MessageBox('You are not authorized to use the application. The password is "delphi".',
-    'Password Protected Delphi application') ;
+    Application.MessageBox('You are not authorized!', 'Warehouse NG') ;
     Application.Terminate;
   end;
 

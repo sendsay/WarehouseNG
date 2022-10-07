@@ -3276,6 +3276,7 @@ object frmLogin: TfrmLogin
   OldCreateOrder = False
   Position = poMainFormCenter
   ShowHint = True
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 20
   object lblLogin: TLabel
@@ -3292,13 +3293,6 @@ object frmLogin: TfrmLogin
     Height = 20
     Caption = 'Password :'
   end
-  object dbcbbUserName: TDBComboBox
-    Left = 113
-    Top = 8
-    Width = 225
-    Height = 28
-    TabOrder = 0
-  end
   object pnlButtons: TPanel
     Left = 0
     Top = 84
@@ -3307,7 +3301,7 @@ object frmLogin: TfrmLogin
     Align = alBottom
     Caption = 'pnlButtons'
     ShowCaption = False
-    TabOrder = 1
+    TabOrder = 0
     object btnCancel: TButton
       AlignWithMargins = True
       Left = 250
@@ -3320,6 +3314,7 @@ object frmLogin: TfrmLogin
       Margins.Bottom = 5
       Align = alRight
       Caption = 'Cancel'
+      ModalResult = 8
       TabOrder = 0
       OnClick = btnCancelClick
     end
@@ -3344,8 +3339,18 @@ object frmLogin: TfrmLogin
     Top = 48
     Width = 225
     Height = 28
+    Hint = 'Enter password'
     PasswordChar = '*'
+    TabOrder = 1
+  end
+  object cbbUsers: TJvComboBox
+    Left = 113
+    Top = 8
+    Width = 225
+    Height = 28
+    Hint = 'Select user'
+    Sorted = True
     TabOrder = 2
-    Text = 'edtPassword'
+    Text = ''
   end
 end

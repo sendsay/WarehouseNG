@@ -25,6 +25,11 @@ type
     wdstrngfldItemsMachine: TWideStringField;
     wdstrngfldItemsNotes: TWideStringField;
     blbfldItemsPhoto: TBlobField;
+    fdqryUsers: TFDQuery;
+    dsUsers: TDataSource;
+    fdtncfldUsersID: TFDAutoIncField;
+    fdqryUsersUserName: TWideStringField;
+    fdqryUsersUserPass: TWideStringField;
     procedure conMainAfterConnect(Sender: TObject);
   private
     { Private declarations }
@@ -35,6 +40,8 @@ type
 var
   DataModule1: TDataModule1;
 
+//  procedure SDM(Str : Variant); stdcall external 'MyDLL.dll' {$IFNDEF DEBUG} delayed {$ENDIF};
+
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
@@ -44,6 +51,7 @@ implementation
 procedure TDataModule1.conMainAfterConnect(Sender: TObject);
 begin
   fdqryItems.Active := True;
+  fdqryUsers.Active := True;
 end;
 
 end.

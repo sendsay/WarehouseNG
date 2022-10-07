@@ -1,9 +1,12 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
-  Height = 178
+  Height = 279
   Width = 489
   object conMain: TFDConnection
     Params.Strings = (
+      
+        'Database=D:\SOFT\Projects\WareHouseNG\Win32\Debug\WareHouse.accd' +
+        'b'
       'DriverID=MSAcc')
     LoginPrompt = False
     AfterConnect = conMainAfterConnect
@@ -65,5 +68,34 @@ object DataModule1: TDataModule1
   object fdphysqltdrvrlnkMain: TFDPhysSQLiteDriverLink
     Left = 360
     Top = 88
+  end
+  object fdqryUsers: TFDQuery
+    Connection = conMain
+    SQL.Strings = (
+      'SELECT * FROM Users')
+    Left = 72
+    Top = 152
+    object fdtncfldUsersID: TFDAutoIncField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+      Visible = False
+    end
+    object fdqryUsersUserName: TWideStringField
+      FieldName = 'UserName'
+      Origin = 'UserName'
+      Size = 255
+    end
+    object fdqryUsersUserPass: TWideStringField
+      FieldName = 'UserPass'
+      Origin = 'UserPass'
+      Size = 255
+    end
+  end
+  object dsUsers: TDataSource
+    DataSet = fdqryUsers
+    Left = 176
+    Top = 152
   end
 end

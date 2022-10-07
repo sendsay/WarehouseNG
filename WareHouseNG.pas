@@ -70,7 +70,8 @@ type
   private
     { Private declarations }
   public
-    sBasePath: string;
+//    sBasePath: string;
+
   end;
 
 type
@@ -86,6 +87,7 @@ var
 
   frmMain: TfrmMain;
   bHasStart: Boolean = True;
+  sBasePath: string;
 
   procedure SDM(Str : Variant); stdcall external 'MyDLL.dll' {$IFNDEF DEBUG} delayed {$ENDIF};
 
@@ -294,11 +296,12 @@ begin
 //      frmMain.FormStyle := fsStayOnTop;
 //      frmMain.FormStyle := fsNormal;
 
-      sBasePath := jvprgstrystrgMain.ReadString('\frmParams\edtDir_Text', '');
-      DataModule1.conMain.Params.Database := sBasePath + '\' + 'WareHouse.accdb';
-
-      DataModule1.conMain.Connected := True;
-      DataModule1.fdqryItems.Active := True;
+//      sBasePath := jvprgstrystrgMain.ReadString('\frmParams\edtDir_Text', '');
+//      DataModule1.conMain.Params.Database := sBasePath + '\' + 'WareHouse.accdb';
+//
+//      DataModule1.conMain.Connected := True;
+//      DataModule1.fdqryItems.Active := True;
+//      DataModule1.fdqryUsers.Active := True;
 
       {$IFNDEF DEBUG}
       frmMain.jvtmrCloseSplash.Enabled := True;
