@@ -377,12 +377,18 @@ begin
 
     if frmMain.srchbxMain.Text = '' then
     begin
-      SQL.Add('SELECT * FROM Items ORDER BY ' + Field.FieldName + sSortMarker)
+      SQL.Add('SELECT * FROM Items WHERE Machine=' +QuotedStr(sMachine)+ ' ORDER BY ' + Field.FieldName + sSortMarker);
     end
     else
     begin
-       sFindStr := QuotedStr('%' +srchbxMain.Text+ '%');
-       SQL.Add('SELECT * FROM Items WHERE ID_Item LIKE ' +sFindStr+ ' or Name_Item LIKE ' +sFindStr+ ' or Notes LIKE ' +sFindStr+ ' or Machine LIKE ' +sFindStr+ 'ORDER BY ' + Field.FieldName + sSortMarker);
+      sFindStr := QuotedStr('%' +srchbxMain.Text+ '%');
+
+  //  SQL.Add('SELECT * FROM Items WHERE Machine (LIKE ' +sMachineFind+ ') AND (WHERE ID_Item LIKE ' +sFindStr+ ' OR Name_Item LIKE ' +sFindStr+ ' OR Notes LIKE ' +sFindStr+ ' ORDER BY ' + Field.FieldName + sSortMarker + ')');
+
+      SQL.Add('SELECT * FROM Items WHERE Machine='+ QuotedStr(sMachine) +' AND (ID_Item LIKE ' +sFindStr+ ' OR Quantity LIKE '+sFindStr+ ' OR Name_Item LIKE ' +sFindStr+ ' OR Notes LIKE ' +sFindStr + ') ORDER BY ' + Field.FieldName + sSortMarker ) ;
+
+//             SQL.Add('SELECT * FROM Items WHERE Machine='+ QuotedStr(sMachine) +' AND (ID_Item LIKE ' +sFindStr+ ' OR Quantity LIKE '+sFindStr+ ' OR Name_Item LIKE ' +sFindStr+ ' OR Notes LIKE ' +sFindStr + ')')
+
     end;
 
     Open;
@@ -400,6 +406,8 @@ procedure TfrmMain.srchbxMainInvokeSearch(Sender: TObject);
 var
   sFindStr : string;
 begin
+  SDM('jjjjjjjjjjjjj');
+
   sFindStr := QuotedStr('%' +srchbxMain.Text+ '%');
 
   with DataModule1.fdqryItems do
@@ -408,10 +416,9 @@ begin
     SQL.Clear;
 
     if srchbxMain.Text <> '' then
-      SQL.Add('SELECT * FROM Items WHERE ID_Item LIKE ' +sFindStr+ ' or Name_Item LIKE ' +sFindStr+ ' or Notes LIKE ' +sFindStr+ ' or Machine LIKE ' +sFindStr )
+       SQL.Add('SELECT * FROM Items WHERE Machine='+QuotedStr(sMachine) +' AND (ID_Item LIKE ' +sFindStr+ ' OR Quantity LIKE '+sFindStr+ ' OR Name_Item LIKE ' +sFindStr+ ' OR Notes LIKE ' +sFindStr + ')')
     else
-      SQL.Add('SELECT * FROM Items');
-
+      SQL.Add('SELECT * FROM Items WHERE Machine='+QuotedStr(sMachine));
     Open;
   end;
 end;

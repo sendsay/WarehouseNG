@@ -119,7 +119,8 @@ begin
         if iTryCount = 3 then
         begin
           //exit with error
-          Application.Terminate;
+          ModalResult := mrCancel;
+//          Application.Terminate;
         end;
       end;
     end
