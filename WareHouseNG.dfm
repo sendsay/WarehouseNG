@@ -3786,7 +3786,7 @@ object frmMain: TfrmMain
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44798.417629375000000000
-    ReportOptions.LastChange = 44799.906104340300000000
+    ReportOptions.LastChange = 44841.341574687500000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       
@@ -3811,7 +3811,9 @@ object frmMain: TfrmMain
       '    Memo.HAlign := haLeft;'
       '  end; }'
       ''
-      '  if (ColumnIndex = 2) or (ColumnIndex = 3) then'
+      
+        '  if (ColumnIndex = 0) or (ColumnIndex = 3) or (ColumnIndex = 4)' +
+        ' then'
       '  begin'
       '    Memo.HAlign := haCenter;'
       '  end;'
@@ -3824,7 +3826,7 @@ object frmMain: TfrmMain
         'procedure Cross1OnCalcWidth(ColumnIndex: Integer; ColumnValues: ' +
         'Variant; var Width: Extended);'
       'begin'
-      '  if (ColumnIndex = 1) then'
+      '  if (ColumnIndex = 2) then'
       '  begin'
       '    Width := 350;'
       '  end;'
