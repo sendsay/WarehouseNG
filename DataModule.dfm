@@ -4,9 +4,6 @@ object DataModule1: TDataModule1
   Width = 489
   object conMain: TFDConnection
     Params.Strings = (
-      
-        'Database=D:\SOFT\Projects\WareHouseNG\Win32\Debug\WareHouse.accd' +
-        'b'
       'DriverID=MSAcc')
     LoginPrompt = False
     AfterConnect = conMainAfterConnect

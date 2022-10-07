@@ -4060,7 +4060,6 @@ object frmMain: TfrmMain
   object jvtmrCloseSplash: TJvTimer
     EventTime = tetPost
     Enabled = False
-    Interval = 2000
     OnTimer = jvtmrCloseSplashTimer
     Left = 425
     Top = 280

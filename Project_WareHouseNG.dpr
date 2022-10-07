@@ -22,13 +22,13 @@ begin
 
   Application.CreateForm(TDataModule1, DataModule1);
 
+  frmSplash := TfrmSplash.Create(nil);
+  frmSplash.Show;
+
+  Application.ProcessMessages;
+
   if TfrmLogin.Execute then
   begin
-    frmSplash := TfrmSplash.Create(nil);
-    frmSplash.Show;
-
-    Application.ProcessMessages;
-
     Application.CreateForm(TfrmMain, frmMain);
     Application.CreateForm(TfrmAddEdit, frmAddEdit);
     Application.CreateForm(TfrmParams, frmParams);
