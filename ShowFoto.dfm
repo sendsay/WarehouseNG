@@ -3474,7 +3474,7 @@ object frmShowFoto: TfrmShowFoto
   Position = poMainFormCenter
   ShowHint = True
   PixelsPerInch = 96
-  TextHeight = 20
+  TextHeight = 19
   object pnlButtons: TPanel
     Left = 0
     Top = 443
@@ -3484,7 +3484,6 @@ object frmShowFoto: TfrmShowFoto
     Caption = 'pnlButtons'
     ShowCaption = False
     TabOrder = 0
-    ExplicitTop = 435
     object btnClose: TButton
       AlignWithMargins = True
       Left = 734
@@ -3501,8 +3500,6 @@ object frmShowFoto: TfrmShowFoto
       ImageMargins.Left = 7
       Images = frmMain.ilMain
       TabOrder = 0
-      ExplicitLeft = 714
-      ExplicitHeight = 38
     end
     object btnUpload: TButton
       AlignWithMargins = True
@@ -3516,11 +3513,10 @@ object frmShowFoto: TfrmShowFoto
       Margins.Bottom = 5
       Action = actUpload
       Align = alLeft
-      ImageIndex = 6
+      ImageIndex = 9
       ImageMargins.Left = 7
       Images = frmMain.ilMain
       TabOrder = 1
-      ExplicitHeight = 38
     end
   end
   object dbimgFoto: TDBImage
@@ -3534,7 +3530,6 @@ object frmShowFoto: TfrmShowFoto
     Proportional = True
     Stretch = True
     TabOrder = 1
-    ExplicitHeight = 440
   end
   object actlstShowFoto: TActionList
     Left = 504

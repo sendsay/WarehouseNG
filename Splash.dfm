@@ -13,7 +13,7 @@ object frmSplash: TfrmSplash
   Font.Style = []
   FormStyle = fsStayOnTop
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object imLogo: TImage
@@ -568,7 +568,7 @@ object frmSplash: TfrmSplash
   object lblName: TLabel
     Left = 192
     Top = 8
-    Width = 148
+    Width = 188
     Height = 32
     Caption = 'Warehouse NG'
     Font.Charset = DEFAULT_CHARSET
@@ -581,8 +581,8 @@ object frmSplash: TfrmSplash
   object lblVersion: TLabel
     Left = 192
     Top = 54
-    Width = 23
-    Height = 24
+    Width = 28
+    Height = 23
     Caption = '2.0'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -594,8 +594,8 @@ object frmSplash: TfrmSplash
   object lblProgName: TLabel
     Left = 192
     Top = 141
-    Width = 113
-    Height = 20
+    Width = 135
+    Height = 19
     Caption = 'Shpakov Vladyslav'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -607,8 +607,8 @@ object frmSplash: TfrmSplash
   object lblYear: TLabel
     Left = 360
     Top = 145
-    Width = 24
-    Height = 17
+    Width = 28
+    Height = 16
     Caption = '2022'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

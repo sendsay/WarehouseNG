@@ -3479,12 +3479,12 @@ object frmParams: TfrmParams
   OldCreateOrder = False
   Position = poMainFormCenter
   PixelsPerInch = 96
-  TextHeight = 20
+  TextHeight = 19
   object lblSSelectDir: TLabel
     Left = 11
     Top = 13
-    Width = 67
-    Height = 20
+    Width = 83
+    Height = 19
     Caption = 'Base path :'
   end
   object pnlButtons: TPanel
@@ -3508,13 +3508,12 @@ object frmParams: TfrmParams
       Margins.Bottom = 5
       Action = actApply
       Align = alLeft
-      ImageIndex = 6
+      ImageIndex = 9
       ImageMargins.Left = 7
       Images = frmMain.ilMain
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
-      ExplicitHeight = 38
     end
     object btnCancel: TButton
       AlignWithMargins = True
@@ -3534,15 +3533,13 @@ object frmParams: TfrmParams
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
-      ExplicitLeft = 430
-      ExplicitHeight = 38
     end
   end
   object edtDir: TEdit
     Left = 97
     Top = 8
     Width = 367
-    Height = 28
+    Height = 27
     TabOrder = 1
     OnChange = edtDirChange
   end

@@ -17,6 +17,7 @@ type
     pnlButtons: TPanel;
     btnClose: TButton;
     ilAbout: TImageList;
+    lblMail: TLabel;
     procedure btnCloseClick(Sender: TObject);
   private
     { Private declarations }

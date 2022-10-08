@@ -5,7 +5,7 @@ object frmAddEdit: TfrmAddEdit
   BorderStyle = bsSingle
   Caption = 'Add'
   ClientHeight = 361
-  ClientWidth = 661
+  ClientWidth = 664
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -3476,65 +3476,65 @@ object frmAddEdit: TfrmAddEdit
   OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 20
+  TextHeight = 19
   object lblIDItem: TLabel
     Left = 8
     Top = 53
-    Width = 52
-    Height = 20
+    Width = 62
+    Height = 19
     Caption = 'ID item :'
   end
   object lblItem: TLabel
     Left = 8
     Top = 12
-    Width = 35
-    Height = 20
+    Width = 41
+    Height = 19
     Caption = 'Item :'
   end
   object lblQuantity: TLabel
     Left = 358
     Top = 53
-    Width = 61
-    Height = 20
+    Width = 70
+    Height = 19
     Caption = 'Quantity :'
   end
   object lblMachine: TLabel
     Left = 56
     Top = 257
-    Width = 59
-    Height = 20
+    Width = 72
+    Height = 19
     Caption = 'Machine :'
     Visible = False
   end
   object lblNotes: TLabel
     Left = 8
     Top = 90
-    Width = 43
-    Height = 20
+    Width = 51
+    Height = 19
     Caption = 'Notes :'
   end
   object lblFoto: TLabel
-    Left = 384
+    Left = 386
     Top = 90
-    Width = 35
-    Height = 20
+    Width = 42
+    Height = 19
     Caption = 'Foto :'
   end
   object pnlButtons: TPanel
     Left = 0
     Top = 306
-    Width = 661
+    Width = 664
     Height = 55
     Align = alBottom
     Caption = 'pnlButtons'
     ShowCaption = False
     TabOrder = 2
-    ExplicitTop = 341
+    ExplicitWidth = 661
     object btnCancel: TButton
       AlignWithMargins = True
-      Left = 550
+      Left = 543
       Top = 6
-      Width = 100
+      Width = 110
       Height = 43
       Margins.Left = 0
       Margins.Top = 5
@@ -3546,14 +3546,13 @@ object frmAddEdit: TfrmAddEdit
       ImageMargins.Left = 7
       Images = frmMain.ilMain
       TabOrder = 0
-      ExplicitLeft = 560
-      ExplicitHeight = 38
+      ExplicitLeft = 553
     end
     object btnSave: TButton
       AlignWithMargins = True
       Left = 11
       Top = 6
-      Width = 100
+      Width = 110
       Height = 43
       Margins.Left = 10
       Margins.Top = 5
@@ -3561,18 +3560,19 @@ object frmAddEdit: TfrmAddEdit
       Margins.Bottom = 5
       Action = actSave
       Align = alLeft
-      ImageIndex = 6
+      ImageIndex = 9
       ImageMargins.Left = 7
       Images = frmMain.ilMain
       TabOrder = 1
-      ExplicitHeight = 38
+      ExplicitLeft = 18
+      ExplicitTop = -1
     end
   end
   object dbedtIDItem: TDBEdit
     Left = 73
     Top = 49
     Width = 272
-    Height = 28
+    Height = 27
     DataField = 'ID_Item'
     DataSource = DataModule1.dsItems
     Font.Charset = DEFAULT_CHARSET
@@ -3586,8 +3586,8 @@ object frmAddEdit: TfrmAddEdit
   object dbedtItem: TDBEdit
     Left = 73
     Top = 8
-    Width = 574
-    Height = 28
+    Width = 580
+    Height = 27
     DataField = 'Name_Item'
     DataSource = DataModule1.dsItems
     Font.Charset = DEFAULT_CHARSET
@@ -3599,10 +3599,10 @@ object frmAddEdit: TfrmAddEdit
     TabOrder = 0
   end
   object jvdbspndtQuantity: TJvDBSpinEdit
-    Left = 425
+    Left = 430
     Top = 49
     Width = 121
-    Height = 28
+    Height = 27
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -3617,7 +3617,7 @@ object frmAddEdit: TfrmAddEdit
     Left = 121
     Top = 253
     Width = 272
-    Height = 28
+    Height = 27
     DataField = 'Machine'
     DataSource = DataModule1.dsItems
     Font.Charset = DEFAULT_CHARSET
@@ -3645,7 +3645,7 @@ object frmAddEdit: TfrmAddEdit
     TabOrder = 5
   end
   object dbimgFoto: TDBImage
-    Left = 425
+    Left = 432
     Top = 91
     Width = 222
     Height = 174
