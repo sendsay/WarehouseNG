@@ -295,15 +295,18 @@ begin
 //      DataModule1.fdqryItems.Active := True;
 //      DataModule1.fdqryUsers.Active := True;
 
+
+      with frmMain do
+      begin
+        Caption := Caption + ' [' + sMachine + ' - ' + sUserName  +']';
+      end;
+
       with DataModule1.fdqryItems do
       begin
-
         SQL.Clear;
         SQL.Add('SELECT * FROM Items WHERE Machine LIKE ' + QuotedStr('%' +sMachine+ '%'));
         Open;
       end;
-
-
 
       {$IFNDEF DEBUG}
       frmMain.jvtmrCloseSplash.Enabled := True;
