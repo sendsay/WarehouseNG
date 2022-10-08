@@ -3279,7 +3279,7 @@ object frmMain: TfrmMain
   OnClose = FormClose
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 19
+  TextHeight = 20
   object jvdbgrdMain: TJvDBGrid
     Left = 0
     Top = 57
@@ -3308,8 +3308,8 @@ object frmMain: TfrmMain
     SelectColumnsDialogStrings.OK = '&OK'
     SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
     EditControls = <>
-    RowsHeight = 23
-    TitleRowHeight = 23
+    RowsHeight = 24
+    TitleRowHeight = 24
     Columns = <
       item
         Expanded = False
@@ -3357,7 +3357,7 @@ object frmMain: TfrmMain
         Title.Font.Height = -17
         Title.Font.Name = 'Ubuntu Condensed'
         Title.Font.Style = [fsBold]
-        Width = 166
+        Width = 186
         Visible = True
       end>
   end
@@ -3460,7 +3460,7 @@ object frmMain: TfrmMain
       TabOrder = 5
       TextHint = 'Enter search string'
       OnInvokeSearch = srchbxMainInvokeSearch
-      ExplicitHeight = 34
+      ExplicitHeight = 37
     end
     object btnPrint: TButton
       AlignWithMargins = True
@@ -3489,7 +3489,6 @@ object frmMain: TfrmMain
       Align = alLeft
       Caption = 'Test'
       TabOrder = 7
-      OnClick = btnTestClick
     end
   end
   object pnlData: TPanel
@@ -3506,21 +3505,21 @@ object frmMain: TfrmMain
       Left = 6
       Top = 21
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 20
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alTop
       Caption = 'ID item :'
-      ExplicitWidth = 62
+      ExplicitWidth = 52
     end
     object dbtxtIDItem: TDBText
       AlignWithMargins = True
       Left = 16
-      Top = 45
+      Top = 46
       Width = 268
-      Height = 23
+      Height = 24
       Margins.Left = 15
       Margins.Top = 5
       Margins.Right = 5
@@ -3536,30 +3535,30 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 46
-      ExplicitWidth = 102
+      ExplicitTop = 45
+      ExplicitWidth = 89
     end
     object lblItem: TLabel
       AlignWithMargins = True
       Left = 6
-      Top = 73
+      Top = 75
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Item :'
-      ExplicitTop = 75
-      ExplicitWidth = 41
+      ExplicitTop = 73
+      ExplicitWidth = 35
     end
     object dbtxtItem: TDBText
       AlignWithMargins = True
       Left = 16
-      Top = 97
+      Top = 100
       Width = 268
-      Height = 23
+      Height = 24
       Margins.Left = 15
       Margins.Top = 5
       Margins.Right = 5
@@ -3575,30 +3574,30 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 100
-      ExplicitWidth = 82
+      ExplicitTop = 97
+      ExplicitWidth = 72
     end
     object lblQuantity: TLabel
       AlignWithMargins = True
       Left = 6
-      Top = 125
+      Top = 129
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Quantity :'
-      ExplicitTop = 129
-      ExplicitWidth = 70
+      ExplicitTop = 125
+      ExplicitWidth = 61
     end
     object dbtxtQuantity: TDBText
       AlignWithMargins = True
       Left = 16
-      Top = 149
+      Top = 154
       Width = 268
-      Height = 23
+      Height = 24
       Margins.Left = 15
       Margins.Top = 5
       Margins.Right = 5
@@ -3614,30 +3613,30 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 154
-      ExplicitWidth = 116
+      ExplicitTop = 149
+      ExplicitWidth = 104
     end
     object lblNotes: TLabel
       AlignWithMargins = True
       Left = 6
-      Top = 177
+      Top = 183
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alTop
       Caption = 'Notes :'
-      ExplicitTop = 183
-      ExplicitWidth = 51
+      ExplicitTop = 177
+      ExplicitWidth = 43
     end
     object dbtxtNotes: TDBText
       AlignWithMargins = True
       Left = 16
-      Top = 201
+      Top = 208
       Width = 268
-      Height = 23
+      Height = 24
       Margins.Left = 15
       Margins.Top = 5
       Margins.Right = 5
@@ -3653,23 +3652,23 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       WordWrap = True
-      ExplicitTop = 208
-      ExplicitWidth = 94
+      ExplicitTop = 201
+      ExplicitWidth = 81
     end
     object lblFoto: TLabel
       AlignWithMargins = True
       Left = 6
-      Top = 376
+      Top = 375
       Width = 278
-      Height = 19
+      Height = 20
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
       Margins.Bottom = 0
       Align = alBottom
       Caption = 'Foto :'
-      ExplicitTop = 375
-      ExplicitWidth = 42
+      ExplicitTop = 376
+      ExplicitWidth = 35
     end
     object dbimgFoto: TDBImage
       AlignWithMargins = True
@@ -3786,7 +3785,7 @@ object frmMain: TfrmMain
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44798.417629375000000000
-    ReportOptions.LastChange = 44841.341574687500000000
+    ReportOptions.LastChange = 44842.370097488430000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       
@@ -3828,7 +3827,7 @@ object frmMain: TfrmMain
       'begin'
       '  if (ColumnIndex = 2) then'
       '  begin'
-      '    Width := 350;'
+      '    Width := 420;'
       '  end;'
       'end;'
       ''
@@ -3838,7 +3837,11 @@ object frmMain: TfrmMain
     OnBeforePrint = frxrprtPrintBeforePrint
     Left = 184
     Top = 224
-    Datasets = <>
+    Datasets = <
+      item
+        DataSet = frxDSPrint
+        DataSetName = 'frxUserDataSet1'
+      end>
     Variables = <>
     Style = <>
     object Data: TfrxDataPage
@@ -3862,29 +3865,31 @@ object frmMain: TfrmMain
         FillGap.Bottom = 0
         FillGap.Right = 0
         Frame.Typ = []
-        Height = 63.574830000000000000
+        Height = 84.472480000000000000
         Top = 18.897650000000000000
         Width = 718.110700000000000000
         object Memo1: TfrxMemoView
           AllowVectorExport = True
-          Width = 75.590600000000000000
-          Height = 30.236240000000000000
+          Top = 34.015770000000000000
+          Width = 60.472480000000000000
+          Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -17
+          Font.Height = -15
           Font.Name = 'Ubuntu Medium'
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'REPORT')
+            'NAME :')
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo2: TfrxMemoView
           AllowVectorExport = True
-          Left = 400.630180000000000000
+          Left = 408.189240000000000000
+          Top = 34.015770000000000000
           Width = 90.708720000000000000
-          Height = 30.236220472440900000
+          Height = 22.677160470000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -16
@@ -3899,9 +3904,10 @@ object frmMain: TfrmMain
         object Date: TfrxMemoView
           IndexTag = 1
           AllowVectorExport = True
-          Left = 495.118430000000000000
+          Left = 502.677490000000000000
+          Top = 34.015770000000000000
           Width = 139.842610000000000000
-          Height = 30.236220470000000000
+          Height = 22.677160470000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -16
@@ -3913,10 +3919,104 @@ object frmMain: TfrmMain
           ParentFont = False
           VAlign = vaCenter
         end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Top = 56.692950000000000000
+          Width = 109.606370000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Ubuntu Medium'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'WAREHOUSE :')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 64.252010000000000000
+          Top = 34.015770000000000000
+          Width = 298.582870000000000000
+          Height = 18.897650000000000000
+          DataField = 'UserName'
+          DataSet = frxDSPrint
+          DataSetName = 'frxUserDataSet1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Ubuntu Medium'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxUserDataSet1."UserName"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 113.385900000000000000
+          Top = 56.692950000000000000
+          Width = 257.008040000000000000
+          Height = 18.897650000000000000
+          DataField = 'Machine'
+          DataSet = frxDSPrint
+          DataSetName = 'frxUserDataSet1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Ubuntu Medium'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxUserDataSet1."Machine"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 241.889920000000000000
+          Width = 196.535560000000000000
+          Height = 22.677180000000000000
+          AutoWidth = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -17
+          Font.Name = 'Ubuntu Medium'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'WAREHOUSE REPORT')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object PageFooter1: TfrxPageFooter
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 22.677180000000000000
+        Top = 162.519790000000000000
+        Width = 718.110700000000000000
+        object Page: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 657.638220000000000000
+          Width = 56.692950000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Page#]')
+        end
       end
       object Cross1: TfrxCrossView
         AllowVectorExport = True
-        Top = 82.708720000000000000
+        Top = 105.385900000000000000
         Width = 16.000000000000000000
         Height = 32.000000000000000000
         DownThenAcross = False
@@ -3932,8 +4032,8 @@ object frmMain: TfrmMain
           3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574
           662D3822207374616E64616C6F6E653D226E6F223F3E3C63726F73733E3C6365
           6C6C6D656D6F733E3C546672784D656D6F5669657720416C6C6F77566563746F
-          724578706F72743D225472756522204C6566743D22302220546F703D2238322E
-          3730383732222057696474683D22313622204865696768743D22333222205265
+          724578706F72743D225472756522204C6566743D22302220546F703D22313035
+          2E33383539222057696474683D22313622204865696768743D22333222205265
           737472696374696F6E733D2232342220416C6C6F7745787072657373696F6E73
           3D2246616C73652220466F6E742E436861727365743D22312220466F6E742E43
           6F6C6F723D22302220466F6E742E4865696768743D222D31362220466F6E742E
@@ -4042,27 +4142,6 @@ object frmMain: TfrmMain
           6F77736F72743E3C6974656D20302F3E3C2F726F77736F72743E3C2F63726F73
           733E}
       end
-      object PageFooter1: TfrxPageFooter
-        FillType = ftBrush
-        FillGap.Top = 0
-        FillGap.Left = 0
-        FillGap.Bottom = 0
-        FillGap.Right = 0
-        Frame.Typ = []
-        Height = 22.677180000000000000
-        Top = 143.622140000000000000
-        Width = 718.110700000000000000
-        object Page: TfrxMemoView
-          IndexTag = 1
-          AllowVectorExport = True
-          Left = 657.638220000000000000
-          Width = 56.692950000000000000
-          Height = 18.897650000000000000
-          Frame.Typ = []
-          Memo.UTF8W = (
-            '[Page#]')
-        end
-      end
     end
   end
   object jvtmrCloseSplash: TJvTimer
@@ -4071,5 +4150,14 @@ object frmMain: TfrmMain
     OnTimer = jvtmrCloseSplashTimer
     Left = 425
     Top = 280
+  end
+  object frxDSPrint: TfrxUserDataSet
+    UserName = 'frxUserDataSet1'
+    Fields.Strings = (
+      'Machine'
+      'UserName')
+    OnGetValue = frxDSPrintGetValue
+    Left = 184
+    Top = 344
   end
 end

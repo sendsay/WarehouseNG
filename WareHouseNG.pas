@@ -47,6 +47,7 @@ type
     actPrint: TAction;
     btnTest: TButton;
     jvtmrCloseSplash: TJvTimer;
+    frxDSPrint: TfrxUserDataSet;
 
     procedure FormShow(Sender: TObject);
     procedure actAddExecute(Sender: TObject);
@@ -65,8 +66,8 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure actAboutExecute(Sender: TObject);
     procedure jvdbgrdMainKeyPress(Sender: TObject; var Key: Char);
-    procedure btnTestClick(Sender: TObject);
     procedure jvtmrCloseSplashTimer(Sender: TObject);
+    procedure frxDSPrintGetValue(const VarName: string; var Value: Variant);
   private
     { Private declarations }
   public
@@ -78,7 +79,6 @@ type
     id: string;
     name: string;
     quantity: string;
-    machine: string;
   end;
 
 var
@@ -88,6 +88,7 @@ var
   bHasStart: Boolean = True;
   sBasePath: string;
   sMachine: string;
+  sUserName: string;
 
   procedure SDM(Str : Variant); stdcall external 'MyDLL.dll' {$IFNDEF DEBUG} delayed {$ENDIF};
 
@@ -114,6 +115,7 @@ function GetSpecialPath(CSIDL: word): string;
 var s: string;
 begin
   SetLength(s, MAX_PATH);
+
   if not SHGetSpecialFolderPath(0, PChar(s), CSIDL, true) then
     s := GetSpecialPath(CSIDL_APPDATA);
 
@@ -124,7 +126,6 @@ procedure Log(sTitle: string);
 begin
   frmMain.jvlgflMain.Severity := INFO;
   frmMain.jvlgflMain.Add(' '+ sTitle);
-
 end;
 
 procedure Log(lcSeverity: TJvLogEventSeverity; sTitle, sDesc: string);
@@ -202,32 +203,36 @@ end;
 
 procedure TfrmMain.actPrintExecute(Sender: TObject);
 var
-  iCountRow : Integer;
+  iCountRow : SmallInt;
 begin
-  SetLength(prnArr, 1);
-  prnArr[0].id := 'ID';
-  prnArr[0].name := 'NAME';
-  prnArr[0].quantity := 'QUANTITY';
-  prnArr[0].machine := 'MACHINE';
+  SetLength(prnArr, 0);
 
   with jvdbgrdMain do
   begin
-    for iCountRow := 1 to SelectedRows.Count do
+    for iCountRow := 0 to SelectedRows.Count - 1 do
     begin
       SetLength(prnArr, Length(prnArr) + 1);
 
-      DataSource.DataSet.GotoBookmark(SelectedRows.Items[iCountRow - 1]) ;
+      DataSource.DataSet.GotoBookmark(SelectedRows.Items[iCountRow]) ;
 
       prnArr[iCountRow].id := DataModule1.wdstrngfldItemsID_Item.AsString;
       prnArr[iCountRow].name  := DataModule1.wdstrngfldItemsName_Item.AsString;
       prnArr[iCountRow].quantity  := DataModule1.intgrfldItemsQuantity.AsString;
-      prnArr[iCountRow].machine := DataModule1.wdstrngfldItemsMachine.AsString;
     end;
   end;
 
   frxrprtPrint.LoadFromFile('PrintReport.fr3');
   frxrprtPrint.PrepareReport(True);
   frxrprtPrint.ShowReport;
+end;
+
+procedure TfrmMain.frxDSPrintGetValue(const VarName: string;
+  var Value: Variant);
+begin
+  if VarName = 'Machine' then
+    Value := sMachine;
+  if VarName = 'UserName' then
+    Value := sUserName;
 end;
 
 procedure TfrmMain.frxrprtPrintBeforePrint(Sender: TfrxReportComponent);
@@ -243,38 +248,22 @@ begin
     Cross.AddValue([0], [1], ['ID']);
     Cross.AddValue([0], [2], ['NAME']);
     Cross.AddValue([0], [3], ['QUANTITY']);
-    Cross.AddValue([0], [4], ['MACHINE']);
 
-    for i := 1 to Length(prnArr) - 1 do
+    for i := 1 to Length(prnArr) do
     begin
-    Cross.AddValue([i], [0], [i]);
+    Cross.AddValue([i], [0], [i]);    //counter row
 
-      for j := 1 to 4 do
+      for j := 1 to 3 do
       begin
         case j of
-          1: Cross. AddValue([i], [j], [prnArr[i].id]);
-          2: Cross. AddValue([i], [j], [prnArr[i].name]);
-          3: Cross. AddValue([i], [j], [prnArr[i].quantity]);
-          4: Cross. AddValue([i], [j], [prnArr[i].machine]);
+          1: Cross. AddValue([i], [j], [prnArr[i - 1].id]);
+          2: Cross. AddValue([i], [j], [prnArr[i - 1].name]);
+          3: Cross. AddValue([i], [j], [prnArr[i - 1].quantity]);
         end;
       end;
 
     end;
   end;
-end;
-
-procedure TfrmMain.btnTestClick(Sender: TObject);
-type
-  TCust = record
-    name: string;
-    age: Integer;
-  end;
-var
-  test : ^TCust;
-begin
-  New(test);
-
-  FreeMem(test);
 end;
 
 procedure TfrmMain.dbimgFotoDblClick(Sender: TObject);
@@ -293,6 +282,7 @@ begin
   begin
     try
       Log(INFO, 'Start', 'Application');
+
 
 //      frmMain.FormStyle := fsStayOnTop;
 //      frmMain.FormStyle := fsNormal;
@@ -382,32 +372,17 @@ begin
     else
     begin
       sFindStr := QuotedStr('%' +srchbxMain.Text+ '%');
-
-  //  SQL.Add('SELECT * FROM Items WHERE Machine (LIKE ' +sMachineFind+ ') AND (WHERE ID_Item LIKE ' +sFindStr+ ' OR Name_Item LIKE ' +sFindStr+ ' OR Notes LIKE ' +sFindStr+ ' ORDER BY ' + Field.FieldName + sSortMarker + ')');
-
       SQL.Add('SELECT * FROM Items WHERE Machine='+ QuotedStr(sMachine) +' AND (ID_Item LIKE ' +sFindStr+ ' OR Quantity LIKE '+sFindStr+ ' OR Name_Item LIKE ' +sFindStr+ ' OR Notes LIKE ' +sFindStr + ') ORDER BY ' + Field.FieldName + sSortMarker ) ;
-
-//             SQL.Add('SELECT * FROM Items WHERE Machine='+ QuotedStr(sMachine) +' AND (ID_Item LIKE ' +sFindStr+ ' OR Quantity LIKE '+sFindStr+ ' OR Name_Item LIKE ' +sFindStr+ ' OR Notes LIKE ' +sFindStr + ')')
-
     end;
 
     Open;
   end;
 end;
 
-procedure TfrmMain.jvtmrCloseSplashTimer(Sender: TObject);
-begin
-  frmSplash.Hide;
-  frmSplash.Free;
-  jvtmrCloseSplash.Enabled := False;
-end;
-
 procedure TfrmMain.srchbxMainInvokeSearch(Sender: TObject);
 var
   sFindStr : string;
 begin
-  SDM('jjjjjjjjjjjjj');
-
   sFindStr := QuotedStr('%' +srchbxMain.Text+ '%');
 
   with DataModule1.fdqryItems do
@@ -421,6 +396,13 @@ begin
       SQL.Add('SELECT * FROM Items WHERE Machine='+QuotedStr(sMachine));
     Open;
   end;
+end;
+
+procedure TfrmMain.jvtmrCloseSplashTimer(Sender: TObject);
+begin
+  frmSplash.Hide;
+  frmSplash.Free;
+  jvtmrCloseSplash.Enabled := False;
 end;
 
 end.

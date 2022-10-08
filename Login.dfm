@@ -3279,19 +3279,19 @@ object frmLogin: TfrmLogin
   ShowHint = True
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 19
+  TextHeight = 20
   object lblLogin: TLabel
     Left = 17
     Top = 11
-    Width = 95
-    Height = 19
+    Width = 79
+    Height = 20
     Caption = 'Login name :'
   end
   object lblPassword: TLabel
     Left = 17
     Top = 51
-    Width = 81
-    Height = 19
+    Width = 65
+    Height = 20
     Caption = 'Password :'
   end
   object pnlButtons: TPanel

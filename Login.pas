@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls,
-  JvTimer, JvExStdCtrls, JvCombobox, Registry;
+  JvTimer, JvExStdCtrls, JvCombobox, Registry, Data.DB;
 
 type
   TfrmLogin = class(TForm)
@@ -91,15 +91,17 @@ end;
 
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
 var
-  sUserName, sUserPass: string;
+  sUserPass: string;
 begin
   with DataModule1 do
   begin
     //check name in base
-    if fdqryUsers.Locate('UserName', cbbUsers.Text, []) then
+    if fdqryUsers.Locate('UserName', cbbUsers.Text, [loCaseInsensitive]) then
     begin
       //get pass
-      sUserPass := fdqryUsers.FieldByName('UserPass').AsString;
+      sUserPass := fdqryUsersUserPass.AsString;
+      //get name
+      sUserName := fdqryUsersUserName.AsString;
 
       //check
       if sUserPass = edtPassword.Text then
