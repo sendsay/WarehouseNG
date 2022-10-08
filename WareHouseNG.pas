@@ -297,10 +297,13 @@ begin
 
       with DataModule1.fdqryItems do
       begin
+
         SQL.Clear;
         SQL.Add('SELECT * FROM Items WHERE Machine LIKE ' + QuotedStr('%' +sMachine+ '%'));
         Open;
       end;
+
+
 
       {$IFNDEF DEBUG}
       frmMain.jvtmrCloseSplash.Enabled := True;

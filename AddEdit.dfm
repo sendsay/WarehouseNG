@@ -4,7 +4,7 @@ object frmAddEdit: TfrmAddEdit
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Add'
-  ClientHeight = 402
+  ClientHeight = 361
   ClientWidth = 661
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -3301,29 +3301,30 @@ object frmAddEdit: TfrmAddEdit
     Caption = 'Quantity :'
   end
   object lblMachine: TLabel
-    Left = 8
-    Top = 94
+    Left = 56
+    Top = 257
     Width = 59
     Height = 20
     Caption = 'Machine :'
+    Visible = False
   end
   object lblNotes: TLabel
     Left = 8
-    Top = 130
+    Top = 90
     Width = 43
     Height = 20
     Caption = 'Notes :'
   end
   object lblFoto: TLabel
     Left = 384
-    Top = 130
+    Top = 90
     Width = 35
     Height = 20
     Caption = 'Foto :'
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 347
+    Top = 306
     Width = 661
     Height = 55
     Align = alBottom
@@ -3415,8 +3416,8 @@ object frmAddEdit: TfrmAddEdit
     DataSource = DataModule1.dsItems
   end
   object dbcbbMachine: TDBComboBox
-    Left = 73
-    Top = 90
+    Left = 121
+    Top = 253
     Width = 272
     Height = 28
     DataField = 'Machine'
@@ -3428,10 +3429,11 @@ object frmAddEdit: TfrmAddEdit
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    Visible = False
   end
   object dbmmoNotes: TDBMemo
     Left = 73
-    Top = 131
+    Top = 91
     Width = 272
     Height = 206
     DataField = 'Notes'
@@ -3446,7 +3448,7 @@ object frmAddEdit: TfrmAddEdit
   end
   object dbimgFoto: TDBImage
     Left = 425
-    Top = 131
+    Top = 91
     Width = 222
     Height = 174
     DataField = 'Photo'
@@ -3458,7 +3460,7 @@ object frmAddEdit: TfrmAddEdit
   end
   object btnBrowse: TButton
     Left = 425
-    Top = 311
+    Top = 271
     Width = 65
     Height = 25
     Action = actBrowse
@@ -3474,7 +3476,7 @@ object frmAddEdit: TfrmAddEdit
   end
   object btnClear: TButton
     Left = 504
-    Top = 311
+    Top = 271
     Width = 65
     Height = 25
     Action = actClear
@@ -3490,7 +3492,7 @@ object frmAddEdit: TfrmAddEdit
   end
   object btnCamera: TButton
     Left = 582
-    Top = 311
+    Top = 271
     Width = 65
     Height = 25
     Action = actCamera

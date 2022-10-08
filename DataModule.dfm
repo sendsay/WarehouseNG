@@ -4,21 +4,16 @@ object DataModule1: TDataModule1
   Width = 489
   object conMain: TFDConnection
     Params.Strings = (
-      
-        'Database=D:\Projects\Delphi\WareHouseNG\Win32\Debug\WareHouse.ac' +
-        'cdb'
       'DriverID=MSAcc')
-    Connected = True
     LoginPrompt = False
     AfterConnect = conMainAfterConnect
     Left = 133
     Top = 27
   end
   object fdqryItems: TFDQuery
-    Active = True
     Connection = conMain
     SQL.Strings = (
-      'SELECT * FROM Items ORDER BY Name_Item')
+      'SELECT * FROM Items WHERE ID_Item='#39'PUUTINHUILLO'#39)
     Left = 77
     Top = 91
     object fdtncfldItemsID: TFDAutoIncField
@@ -73,7 +68,6 @@ object DataModule1: TDataModule1
     Top = 88
   end
   object fdqryUsers: TFDQuery
-    Active = True
     Connection = conMain
     SQL.Strings = (
       'SELECT * FROM Users')
