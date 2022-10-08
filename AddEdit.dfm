@@ -4,7 +4,7 @@ object frmAddEdit: TfrmAddEdit
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Add'
-  ClientHeight = 396
+  ClientHeight = 402
   ClientWidth = 661
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -3323,40 +3323,50 @@ object frmAddEdit: TfrmAddEdit
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 346
+    Top = 347
     Width = 661
-    Height = 50
+    Height = 55
     Align = alBottom
     Caption = 'pnlButtons'
     ShowCaption = False
     TabOrder = 2
+    ExplicitTop = 341
     object btnCancel: TButton
       AlignWithMargins = True
-      Left = 560
+      Left = 550
       Top = 6
-      Width = 90
-      Height = 38
+      Width = 100
+      Height = 43
       Margins.Left = 0
       Margins.Top = 5
       Margins.Right = 10
       Margins.Bottom = 5
       Action = actClose
       Align = alRight
+      ImageIndex = 5
+      ImageMargins.Left = 7
+      Images = frmMain.ilMain
       TabOrder = 0
+      ExplicitLeft = 560
+      ExplicitHeight = 38
     end
     object btnSave: TButton
       AlignWithMargins = True
       Left = 11
       Top = 6
-      Width = 90
-      Height = 38
+      Width = 100
+      Height = 43
       Margins.Left = 10
       Margins.Top = 5
       Margins.Right = 0
       Margins.Bottom = 5
       Action = actSave
       Align = alLeft
+      ImageIndex = 6
+      ImageMargins.Left = 7
+      Images = frmMain.ilMain
       TabOrder = 1
+      ExplicitHeight = 38
     end
   end
   object dbedtIDItem: TDBEdit

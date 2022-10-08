@@ -7,6 +7,7 @@ object frmParams: TfrmParams
   ClientHeight = 299
   ClientWidth = 531
   Color = clBtnFace
+  CustomTitleBar.Height = 10
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -17
@@ -3280,19 +3281,19 @@ object frmParams: TfrmParams
   OldCreateOrder = False
   Position = poMainFormCenter
   PixelsPerInch = 96
-  TextHeight = 19
+  TextHeight = 20
   object lblSSelectDir: TLabel
-    Left = 8
-    Top = 12
-    Width = 83
-    Height = 19
+    Left = 11
+    Top = 13
+    Width = 67
+    Height = 20
     Caption = 'Base path :'
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 249
+    Top = 244
     Width = 531
-    Height = 50
+    Height = 55
     Align = alBottom
     Caption = 'pnlButtons'
     ShowCaption = False
@@ -3301,46 +3302,55 @@ object frmParams: TfrmParams
       AlignWithMargins = True
       Left = 11
       Top = 6
-      Width = 90
-      Height = 38
+      Width = 120
+      Height = 43
       Margins.Left = 10
       Margins.Top = 5
       Margins.Right = 0
       Margins.Bottom = 5
       Action = actApply
       Align = alLeft
+      ImageIndex = 6
+      ImageMargins.Left = 7
+      Images = frmMain.ilMain
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
+      ExplicitHeight = 38
     end
     object btnCancel: TButton
       AlignWithMargins = True
-      Left = 430
+      Left = 420
       Top = 6
-      Width = 90
-      Height = 38
+      Width = 100
+      Height = 43
       Margins.Left = 0
       Margins.Top = 5
       Margins.Right = 10
       Margins.Bottom = 5
       Action = actCancel
       Align = alRight
+      ImageIndex = 5
+      ImageMargins.Left = 7
+      Images = frmMain.ilMain
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
+      ExplicitLeft = 430
+      ExplicitHeight = 38
     end
   end
   object edtDir: TEdit
     Left = 97
     Top = 8
     Width = 367
-    Height = 27
+    Height = 28
     TabOrder = 1
     OnChange = edtDirChange
   end
   object btnSelDir: TButton
-    Left = 470
-    Top = 8
+    Left = 473
+    Top = 9
     Width = 50
     Height = 27
     Action = actBrowse
@@ -3357,7 +3367,7 @@ object frmParams: TfrmParams
       ShortCut = 16449
     end
     object actCancel: TAction
-      Caption = 'Cancel'
+      Caption = 'Close'
       Hint = 'Cancel changes'
       ShortCut = 16451
       OnExecute = actCancelExecute
@@ -3379,11 +3389,11 @@ object frmParams: TfrmParams
   end
   object jvfrmstrgParams: TJvFormStorage
     AppStorage = frmMain.jvprgstrystrgMain
-    AppStoragePath = '%FORM_NAME%'
+    AppStoragePath = '%FORM_NAME%\'
     StoredProps.Strings = (
       'edtDir.Text')
     StoredValues = <>
-    Left = 312
-    Top = 144
+    Left = 328
+    Top = 64
   end
 end

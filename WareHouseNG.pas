@@ -9,7 +9,7 @@ uses
   JvComponentBase, JvAppStorage, JvAppRegistryStorage, Vcl.StdCtrls,
   Vcl.WinXCtrls, Vcl.DBCtrls, JvExDBGrids, JvDBGrid, System.Actions,
   Vcl.ActnList, JvLogFile, JvLogClasses, ShlObj, Vcl.Imaging.pngimage, System.UITypes,
-  JvTimer, frxClass, frxCross;
+  JvTimer, frxClass, frxCross, System.ImageList, Vcl.ImgList;
 
 type
   TfrmMain = class(TForm)
@@ -48,6 +48,7 @@ type
     btnTest: TButton;
     jvtmrCloseSplash: TJvTimer;
     frxDSPrint: TfrxUserDataSet;
+    ilMain: TImageList;
 
     procedure FormShow(Sender: TObject);
     procedure actAddExecute(Sender: TObject);

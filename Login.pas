@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls,
-  JvTimer, JvExStdCtrls, JvCombobox, Registry, Data.DB;
+  JvTimer, JvExStdCtrls, JvCombobox, Registry, Data.DB, System.ImageList,
+  Vcl.ImgList;
 
 type
   TfrmLogin = class(TForm)
@@ -16,6 +17,7 @@ type
     edtPassword: TEdit;
     btnLogin: TButton;
     cbbUsers: TJvComboBox;
+    ilLogin: TImageList;
     procedure btnCancelClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
     procedure FormShow(Sender: TObject);

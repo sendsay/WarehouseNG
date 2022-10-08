@@ -3,7 +3,7 @@ object frmShowFoto: TfrmShowFoto
   Top = 42
   BorderIcons = [biSystemMenu]
   Caption = 'Show foto'
-  ClientHeight = 490
+  ClientHeight = 498
   ClientWidth = 845
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -3279,55 +3279,64 @@ object frmShowFoto: TfrmShowFoto
   TextHeight = 20
   object pnlButtons: TPanel
     Left = 0
-    Top = 440
+    Top = 443
     Width = 845
-    Height = 50
+    Height = 55
     Align = alBottom
     Caption = 'pnlButtons'
     ShowCaption = False
     TabOrder = 0
-    ExplicitTop = 559
+    ExplicitTop = 435
     object btnClose: TButton
       AlignWithMargins = True
-      Left = 744
+      Left = 734
       Top = 6
-      Width = 90
-      Height = 38
+      Width = 100
+      Height = 43
       Margins.Left = 0
       Margins.Top = 5
       Margins.Right = 10
       Margins.Bottom = 5
       Action = actClose
       Align = alRight
+      ImageIndex = 5
+      ImageMargins.Left = 7
+      Images = frmMain.ilMain
       TabOrder = 0
+      ExplicitLeft = 714
+      ExplicitHeight = 38
     end
     object btnUpload: TButton
       AlignWithMargins = True
       Left = 11
       Top = 6
-      Width = 75
-      Height = 38
+      Width = 120
+      Height = 43
       Margins.Left = 10
       Margins.Top = 5
       Margins.Right = 0
       Margins.Bottom = 5
       Action = actUpload
       Align = alLeft
+      ImageIndex = 6
+      ImageMargins.Left = 7
+      Images = frmMain.ilMain
       TabOrder = 1
+      ExplicitHeight = 38
     end
   end
   object dbimgFoto: TDBImage
     Left = 0
     Top = 0
     Width = 845
-    Height = 440
+    Height = 443
     Align = alClient
     DataField = 'Photo'
     DataSource = DataModule1.dsItems
     Proportional = True
     Stretch = True
     TabOrder = 1
-    ExplicitHeight = 559
+    ExplicitHeight = 440
   end
   object actlstShowFoto: TActionList
     Left = 504
@@ -3352,7 +3361,7 @@ object frmShowFoto: TfrmShowFoto
   end
   object jvfrmstrgShowPhoto: TJvFormStorage
     AppStorage = frmMain.jvprgstrystrgMain
-    AppStoragePath = '%FORM_NAME%'
+    AppStoragePath = '%FORM_NAME%\'
     StoredProps.Strings = (
       'actClose.AutoCheck')
     StoredValues = <>
