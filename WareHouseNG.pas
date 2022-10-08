@@ -284,18 +284,6 @@ begin
     try
       Log(INFO, 'Start', 'Application');
 
-
-//      frmMain.FormStyle := fsStayOnTop;
-//      frmMain.FormStyle := fsNormal;
-
-//      sBasePath := jvprgstrystrgMain.ReadString('\frmParams\edtDir_Text', '');
-//      DataModule1.conMain.Params.Database := sBasePath + '\' + 'WareHouse.accdb';
-//
-//      DataModule1.conMain.Connected := True;
-//      DataModule1.fdqryItems.Active := True;
-//      DataModule1.fdqryUsers.Active := True;
-
-
       with frmMain do
       begin
         Caption := Caption + ' [' + sMachine + ' - ' + sUserName  +']';
