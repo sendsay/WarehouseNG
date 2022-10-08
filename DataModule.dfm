@@ -4,6 +4,7 @@ object DataModule1: TDataModule1
   Width = 489
   object conMain: TFDConnection
     Params.Strings = (
+      'Password=Dell09061976'
       'DriverID=MSAcc')
     LoginPrompt = False
     AfterConnect = conMainAfterConnect
