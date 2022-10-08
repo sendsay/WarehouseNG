@@ -174,6 +174,7 @@ end;
 
 procedure TfrmAddEdit.FormShow(Sender: TObject);
 begin
+  dbcbbMachine.Text := sMachine;
   dbedtItem.SetFocus;  
 end;
 
