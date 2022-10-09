@@ -2,13 +2,13 @@ object frmMain: TfrmMain
   Left = 0
   Top = 0
   Caption = 'Warehouse NG Aadmin'
-  ClientHeight = 409
-  ClientWidth = 635
+  ClientHeight = 490
+  ClientWidth = 871
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'Tahoma'
+  Font.Height = -17
+  Font.Name = 'Ubuntu condenced'
   Font.Style = []
   Icon.Data = {
     0000010006000000000001002000D13C00006600000080800000010020002808
@@ -3615,5 +3615,77 @@ object frmMain: TfrmMain
     00000000000000000000000000000000000000000000000000000000000000}
   OldCreateOrder = False
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 19
+  object jvdbgrdUsers: TJvDBGrid
+    Left = 312
+    Top = 8
+    Width = 551
+    Height = 289
+    DataSource = DataModule2.dsUsers
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -17
+    TitleFont.Name = 'Ubuntu condenced'
+    TitleFont.Style = []
+    SelectColumnsDialogStrings.Caption = 'Select columns'
+    SelectColumnsDialogStrings.OK = '&OK'
+    SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
+    EditControls = <>
+    RowsHeight = 23
+    TitleRowHeight = 23
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'UserName'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'UserPass'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Machine'
+        Visible = False
+      end>
+  end
+  object jvdbgrdMachine: TJvDBGrid
+    Left = 8
+    Top = 8
+    Width = 289
+    Height = 289
+    DataSource = DataModule2.dsMachine
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -17
+    TitleFont.Name = 'Ubuntu condenced'
+    TitleFont.Style = []
+    SelectColumnsDialogStrings.Caption = 'Select columns'
+    SelectColumnsDialogStrings.OK = '&OK'
+    SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
+    EditControls = <>
+    RowsHeight = 23
+    TitleRowHeight = 23
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'MachineName'
+        Visible = True
+      end>
+  end
 end

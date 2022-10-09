@@ -6,12 +6,23 @@ uses
   System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
-  Data.DB, FireDAC.Comp.Client;
+  Data.DB, FireDAC.Comp.Client, FireDAC.Phys.MSAcc, FireDAC.Phys.MSAccDef,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet;
 
 type
   TDataModule2 = class(TDataModule)
     dsUsers: TDataSource;
-    FDConnection1: TFDConnection;
+    conMain: TFDConnection;
+    fdqryUsers: TFDQuery;
+    fdqryMachine: TFDQuery;
+    dsMachine: TDataSource;
+    fdtncfldUsersID: TFDAutoIncField;
+    wdstrngfldUsersUserName: TWideStringField;
+    wdstrngfldUsersUserPass: TWideStringField;
+    intgrfldUsersMachine: TIntegerField;
+    fdtncfldMachineID: TFDAutoIncField;
+    wdstrngfldMachineMachineName: TWideStringField;
   private
     { Private declarations }
   public
