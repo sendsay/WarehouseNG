@@ -174,7 +174,7 @@ end;
 
 procedure TfrmAddEdit.FormShow(Sender: TObject);
 begin
-  DataModule1.wdstrngfldItemsMachine.Value := sMachine;
+  DataModule1.wdstrngfldItemsMachine.Value := sMachine;  //fill machine field
   dbedtItem.SetFocus;
 end;
 
