@@ -73,7 +73,7 @@ object DataModule1: TDataModule1
     SQL.Strings = (
       'SELECT * FROM Users')
     Left = 72
-    Top = 160
+    Top = 144
     object fdtncfldUsersID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -99,6 +99,6 @@ object DataModule1: TDataModule1
   object dsUsers: TDataSource
     DataSet = fdqryUsers
     Left = 176
-    Top = 152
+    Top = 144
   end
 end

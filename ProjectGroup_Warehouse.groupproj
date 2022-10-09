@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5151004C-2B1F-4349-8E50-810CC5D00897}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project_WareHouseNG.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Project_WareHouseNG_Admin.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_WareHouseNG">
+        <MSBuild Projects="Project_WareHouseNG.dproj"/>
+    </Target>
+    <Target Name="Project_WareHouseNG:Clean">
+        <MSBuild Projects="Project_WareHouseNG.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_WareHouseNG:Make">
+        <MSBuild Projects="Project_WareHouseNG.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_WareHouseNG_Admin">
+        <MSBuild Projects="Project_WareHouseNG_Admin.dproj"/>
+    </Target>
+    <Target Name="Project_WareHouseNG_Admin:Clean">
+        <MSBuild Projects="Project_WareHouseNG_Admin.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_WareHouseNG_Admin:Make">
+        <MSBuild Projects="Project_WareHouseNG_Admin.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_WareHouseNG;Project_WareHouseNG_Admin"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_WareHouseNG:Clean;Project_WareHouseNG_Admin:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_WareHouseNG:Make;Project_WareHouseNG_Admin:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

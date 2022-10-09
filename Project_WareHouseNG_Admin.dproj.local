@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.247,=C:\Users\SendSay\Desktop\Vitautas\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022.10.09 10:01:48.480,=C:\Users\SendSay\Desktop\Vitautas\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022.10.09 10:03:21.361,D:\Projects\Delphi\WarehouseNG\WareHouseNG_Admin.pas=C:\Users\SendSay\Desktop\Vitautas\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022.10.09 10:03:21.361,D:\Projects\Delphi\WarehouseNG\WareHouseNG_Admin.dfm=C:\Users\SendSay\Desktop\Vitautas\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022.10.09 10:03:33.718,D:\Projects\Delphi\WarehouseNG\Project_WareHouseNG_Admin.dproj=C:\Users\SendSay\Desktop\Vitautas\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022.10.09 10:04:11.788,=D:\Projects\Delphi\WarehouseNG\Unit2.pas</Transaction>
+    <Transaction>2022.10.09 10:05:39.780,D:\Projects\Delphi\WarehouseNG\DataModuleAdmin.pas=D:\Projects\Delphi\WarehouseNG\Unit2.pas</Transaction>
+    <Transaction>2022.10.09 10:05:39.780,D:\Projects\Delphi\WarehouseNG\DataModuleAdmin.dfm=D:\Projects\Delphi\WarehouseNG\Unit2.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
